@@ -9,7 +9,7 @@ ms.date: 06/08/2018
 
 # Use view formatting to customize SharePoint
 
-You can use view formatting to customize how views in SharePoint lists and libraries are displayed.  To do this, you construct a JSON object that describes the elements that are displayed with a row is loaded in a list view, and styles to be applied to those elements.  View formatting does not change the data in list items of riles; it only changes how it's displayed to users who browse the list.  Anyone who can create and manage views in a list can use view formatting to configure how views are displayed.
+You can use view formatting to customize how views in SharePoint lists and libraries are displayed.  To do this, you construct a JSON object that describes the HTML Element structure of a row, among other things.  View formatting does not change the data in list items of files; it only changes how it's displayed to users who browse the list.  Anyone who can create and manage views in a list can use view formatting to configure how views are displayed. It's a very powerful feature that enables the users to have very custom UX for their lists and libraries.
 
 For example, a list with no view formats applied might look like this:
 
@@ -145,7 +145,7 @@ This example was adopted from a column formatting example, [Conditional formatti
 
 ## Build custom row layouts
 
-You can use view formatting to define a totally custom layout of field values inside a row.
+You can use view formatting to define a totally custom layout for rows in a list or library.
 
 ### Multi-line view
 
@@ -190,10 +190,10 @@ Optional element.  Specifies a CSS class that is applied to the row.
 
 ### hideSelection
 
-Optional element.  Specifies whether the ability to select rows in the view is diabled or not.  *false* is the default behavior inside a list view.  *true* means that users will not be able to select list items.  
+Optional element.  A boolean that specifies whether the ability to select rows in the view is diabled.  *false* is the default behavior inside a list view.  *true* means that users will not see the selection UX on the list or library.  
 
 `hideSelection` only takes effect when there's a `rowFormatter` element specified.  If no `rowFormatter` is specified, then `hideSelection` is ignored.
 
 ### hideColumnHeader
 
-Optional element.  Specifies whether the column headers in the view are hidden or not.  *false* is the default behavior inside a list view.  *true* means that the view will not display column headers.
+Optional element.  A boolean that specifies whether the column headers in the view is hidden.  *false* is the default behavior inside a list view.  *true* means that the view will not display column headers.
